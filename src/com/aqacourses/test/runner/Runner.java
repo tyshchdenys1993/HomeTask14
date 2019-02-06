@@ -42,7 +42,7 @@ public class Runner {
         data.clear();
 
         StudentPedin studentPedin = new StudentPedin();
-        String pathToFile = "D:/AQACourses/FileForParse.txt"; //path to text file
+        String pathToFile = "src/com/aqacourses/test/resources/FileForParse.txt"; //path to text file
         data = studentPedin.parseFromDb(pathToFile);
         studentPedin.writeToDb(data);
     }

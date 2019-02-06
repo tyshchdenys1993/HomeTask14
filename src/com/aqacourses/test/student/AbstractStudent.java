@@ -52,7 +52,7 @@ public abstract class AbstractStudent {
         String age = data.get(1);
         String sex = data.get(2);
 
-        if(((name.contains(" ")) &&
+        if(((!name.isEmpty()) &&
                 ((Integer.parseInt(age)>16 && Integer.parseInt(age)<26)) &&
                 (sex.equals("male")  || sex.equals("female"))))
         {
