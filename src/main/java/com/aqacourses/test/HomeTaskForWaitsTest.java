@@ -24,6 +24,12 @@ public class HomeTaskForWaitsTest {
     private final String ERROR_MESSAGE_XPATH = "//span[@id='spanMessage']";
     private final String REMOVE_FRAME_BUTTON = "//div[@class='preview__action--close']/a";
 
+
+    /**
+     * Method that checks is elements presented of the page by locator
+     * @param locator
+     * @return
+     */
     public boolean isElementPresent(By locator) {
         try {
             driver.findElement(locator);
@@ -33,6 +39,9 @@ public class HomeTaskForWaitsTest {
         }
     }
 
+    /**
+     * Set up method
+     */
     @Before
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
@@ -45,6 +54,10 @@ public class HomeTaskForWaitsTest {
         webDriverWait.ignoring(TimeoutException.class).withMessage("Can't find elements");
     }
 
+
+    /**
+     * Open https://s1.demo.opensourcecms.com/s/44 and make some tests with invalid credentials, empty credentials and with filled only username field
+     */
     @Test
     public void testHomeTaskForWaitsTest(){
 
@@ -74,6 +87,9 @@ public class HomeTaskForWaitsTest {
         Assert.assertEquals("Password cannot be empty", driver.findElement(By.xpath(ERROR_MESSAGE_XPATH)).getText());
     }
 
+    /**
+     * Close browser
+     */
     @After
     public void tearDown(){
         driver.quit();
