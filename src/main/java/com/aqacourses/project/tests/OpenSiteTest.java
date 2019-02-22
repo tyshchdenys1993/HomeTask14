@@ -1,30 +1,14 @@
 package com.aqacourses.project.tests;
 
+import com.aqacourses.project.base.BaseTest;
 import com.aqacourses.project.pages.AccountPage;
+import com.aqacourses.project.pages.DressesPage;
 import com.aqacourses.project.pages.HomePage;
 import com.aqacourses.project.pages.LoginPage;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
-public class OpenSiteTest {
+public class OpenSiteTest extends BaseTest {
 
-    private WebDriver driver;
-    private String URL = "http://automationpractice.com/index.php";
-    /**
-     * Set up method
-     */
-    @Before
-    public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("disable-infobars");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-    }
     /**
      * Open site, login and logout
      *
@@ -32,19 +16,30 @@ public class OpenSiteTest {
     @Test
     public void testOpenSiteTest(){
 
-        driver.get(URL);
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = openSite();
         LoginPage loginPage = homePage.clickSignInButton();
         AccountPage accountPage = loginPage.login();
         accountPage.verifyUserName();
         accountPage.clickSignOutButton();
         loginPage.verifyLoginPage();
+        closeSite();
     }
+
     /**
-     * Quit the driver
+     * Open site, login, go to Dresses page, choose only white colors dresses and verify that quantity is correct.
+     * Then click to white color filter button and verify quantity again
      */
-    @After
-    public void tearDown(){
-        driver.quit();
+    @Test
+    public void testOpenDressPage (){
+
+        HomePage homePage = openSite();
+        LoginPage loginPage = homePage.clickSignInButton();
+        AccountPage accountPage = loginPage.login();
+        DressesPage dressesPage = accountPage.clickToDressesButton();
+        dressesPage.clickToSummerDressesButton();
+        dressesPage.verifyCountOfProductsOnDressesPage();
+        dressesPage.clickToWhiteColorFilterButton();
+        dressesPage.verifyCountOfProductsOnDressesPage();
+        closeSite();
     }
 }

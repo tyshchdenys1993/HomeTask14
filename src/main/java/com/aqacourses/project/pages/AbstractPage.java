@@ -1,12 +1,10 @@
 package com.aqacourses.project.pages;
 
+import com.aqacourses.project.base.BaseTest;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class AbstractPage {
 
@@ -19,20 +17,23 @@ public abstract class AbstractPage {
     @FindBy(xpath = "//a[@class='account']/span")
     private WebElement userName;
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+    @FindBy (xpath = "//ul[contains(@class,'submenu-container')]/preceding-sibling::a[@title='Dresses']")
+    private WebElement dressesButton;
+
+
+
+    protected BaseTest testClass;
     private String name = "Den";
     private String surname ="Tysh";
 
     /**
      * Constructor
      *
-     * @param driver
+     * @param testClass
      */
-    public AbstractPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 10);
-        PageFactory.initElements(driver, this);
+    public AbstractPage(BaseTest testClass) {
+        this.testClass = testClass;
+        PageFactory.initElements(testClass.getDriver(), this);
     }
 
     /**
@@ -41,18 +42,20 @@ public abstract class AbstractPage {
      * @return
      */
     public LoginPage clickSignInButton(){
-        wait.until(ExpectedConditions.elementToBeClickable(signInButton)).click();
-        return new LoginPage(driver);
+        testClass.waitTillElementIsClickable(signInButton);
+        signInButton.click();
+        return new LoginPage(testClass);
     }
 
     /**
      * Click on Sign Out button
      *
-     * @return
+     * @return instance of LoginPage
      */
     public LoginPage clickSignOutButton(){
-        wait.until(ExpectedConditions.elementToBeClickable(logoutButton)).click();
-        return new LoginPage(driver);
+        testClass.waitTillElementIsClickable(logoutButton);
+        logoutButton.click();
+        return new LoginPage(testClass);
     }
 
     /**
@@ -62,4 +65,15 @@ public abstract class AbstractPage {
         Assert.assertEquals(name + " " + surname, userName.getText());
     }
 
+    /**
+     * Click on Dresses button
+     *
+     * @return instance of DressesPage
+     */
+
+   public DressesPage clickToDressesButton(){
+        testClass.waitTillElementIsClickable(dressesButton);
+        dressesButton.click();
+        return new DressesPage(testClass);
+   }
 }

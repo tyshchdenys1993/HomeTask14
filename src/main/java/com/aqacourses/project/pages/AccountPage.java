@@ -1,22 +1,16 @@
 package com.aqacourses.project.pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import com.aqacourses.project.base.BaseTest;
 
 public class AccountPage extends AbstractPage {
 
-    private WebDriver driver;
-    private WebDriverWait wait;
-
-    /**
+     /**
      * Constructor
      *
-     * @param driver
+     * @param testClass
      */
 
-    public AccountPage(WebDriver driver) {
-        super(driver);
-        this.driver = driver;
-        wait = new WebDriverWait(driver,10);
+    public AccountPage(BaseTest testClass) {
+        super(testClass);
     }
 }
