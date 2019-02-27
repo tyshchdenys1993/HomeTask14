@@ -38,9 +38,10 @@ public class DressesPage extends AbstractPage {
      * Click to Summer Dresses button
      */
 
-    public void clickToSummerDressesButton (){
+    public SummerDressesPage clickToSummerDressesButton (){
         testClass.waitTillElementIsClickable(summerDressesButton);
         summerDressesButton.click();
+        return new SummerDressesPage(testClass);
     }
 
     /**

@@ -20,6 +20,8 @@ public abstract class AbstractPage {
     @FindBy (xpath = "//ul[contains(@class,'submenu-container')]/preceding-sibling::a[@title='Dresses']")
     private WebElement dressesButton;
 
+    @FindBy(xpath = "//a[@title='Dresses']/following::a[@title='T-shirts']")
+    private WebElement TShirtsButton;
 
 
     protected BaseTest testClass;
@@ -39,7 +41,7 @@ public abstract class AbstractPage {
     /**
      * Click on Sign In button
      *
-     * @return
+     * @return instance of LoginPage
      */
     public LoginPage clickSignInButton(){
         testClass.waitTillElementIsClickable(signInButton);
@@ -75,5 +77,11 @@ public abstract class AbstractPage {
         testClass.waitTillElementIsClickable(dressesButton);
         dressesButton.click();
         return new DressesPage(testClass);
+   }
+
+   public TShirtsPage clickToTShirtsButton(){
+       testClass.waitTillElementIsClickable(TShirtsButton);
+       TShirtsButton.click();
+       return new TShirtsPage(testClass);
    }
 }

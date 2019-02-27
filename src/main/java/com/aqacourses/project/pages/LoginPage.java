@@ -43,7 +43,6 @@ public class LoginPage extends AbstractPage {
 
         testClass.waitTillElementIsVisible(emailField);
         emailField.sendKeys(YamlParser.getYamlData().getEmail());
-        testClass.waitTillElementIsVisible(passwordField);
         passwordField.sendKeys(YamlParser.getYamlData().getPassword());
         testClass.waitTillElementIsClickable(submitButton);
         submitButton.click();

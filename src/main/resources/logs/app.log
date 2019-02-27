@@ -1,0 +1,58 @@
+2019-40-27 17:40:51.143 [main] INFO   - Opened site
+2019-40-27 17:40:53.770 [main] INFO   - Opened Login Page
+2019-40-27 17:40:56.550 [main] INFO   - Opened My Account Page
+2019-40-27 17:40:59.196 [main] INFO   - Opened T-Shirts Page
+2019-41-27 17:41:01.299 [main] INFO   - Opened Faded Short sleeve T-Shirt Page
+2019-41-27 17:41:01.384 [main] INFO   - Verified breadcrumb
+2019-41-27 17:41:01.513 [main] INFO   - Opened information dialog
+2019-41-27 17:41:04.365 [main] INFO   - Opened shopping card page
+2019-41-27 17:41:04.511 [main] INFO   - Clicked Increase quantity button
+2019-41-27 17:41:04.678 [main] INFO   - Verified total price with unit price multiplied with quantity
+2019-41-27 17:41:04.788 [main] INFO   - Deleted Faded Short sleeve T-Shirt
+2019-41-27 17:41:07.680 [main] INFO   - Verified alert message
+2019-41-27 17:41:09.168 [main] INFO   - Closed site
+2019-41-27 17:41:23.115 [main] INFO   - Opened site
+2019-41-27 17:41:27.644 [main] INFO   - Opened Login Page
+2019-41-27 17:41:31.181 [main] INFO   - Opened My Account Page
+2019-41-27 17:41:31.250 [main] INFO   - Verified user name
+2019-41-27 17:41:33.791 [main] INFO   - User is signed out
+2019-41-27 17:41:33.888 [main] INFO   - Verified Login Page
+2019-41-27 17:41:35.314 [main] INFO   - Closed site
+2019-41-27 17:41:49.673 [main] INFO   - Opened site
+2019-41-27 17:41:51.916 [main] INFO   - Opened Login Page
+2019-41-27 17:41:55.413 [main] INFO   - Opened My Account Page
+2019-41-27 17:41:58.303 [main] INFO   - Opened Dresses Page
+2019-42-27 17:42:00.670 [main] INFO   - Opened Summer Dresses Page
+2019-42-27 17:42:00.774 [main] INFO   - Verified count of products from the message and from page
+2019-42-27 17:42:00.977 [main] INFO   - Selected only White dresses
+2019-42-27 17:42:01.042 [main] INFO   - Verified count of products from the message and from page again
+2019-42-27 17:42:02.505 [main] INFO   - Closed site
+2019-42-27 17:42:44.649 [main] INFO   - Opened site
+2019-42-27 17:42:47.507 [main] INFO   - Opened Login Page
+2019-42-27 17:42:51.435 [main] INFO   - Opened My Account Page
+2019-42-27 17:42:54.657 [main] INFO   - Opened T-Shirts Page
+2019-43-27 17:43:03.201 [main] INFO   - Opened Faded Short sleeve T-Shirt Page
+2019-43-27 17:43:03.256 [main] INFO   - Verified breadcrumb
+2019-43-27 17:43:08.523 [main] INFO   - Opened information dialog
+2019-43-27 17:43:18.674 [main] INFO   - Opened shopping card page
+2019-43-27 17:43:24.059 [main] INFO   - Clicked Increase quantity button
+2019-43-27 17:43:24.172 [main] INFO   - Verified total price with unit price multiplied with quantity
+2019-43-27 17:43:29.257 [main] INFO   - Deleted Faded Short sleeve T-Shirt
+2019-43-27 17:43:31.281 [main] INFO   - Verified alert message
+2019-43-27 17:43:32.635 [main] INFO   - Closed site
+2019-43-27 17:43:49.184 [main] INFO   - Opened site
+2019-43-27 17:43:52.715 [main] INFO   - Opened Login Page
+2019-43-27 17:43:55.584 [main] INFO   - Opened My Account Page
+2019-43-27 17:43:55.669 [main] INFO   - Verified user name
+2019-43-27 17:43:58.502 [main] INFO   - User is signed out
+2019-43-27 17:43:58.606 [main] INFO   - Verified Login Page
+2019-44-27 17:44:00.010 [main] INFO   - Closed site
+2019-44-27 17:44:16.562 [main] INFO   - Opened site
+2019-44-27 17:44:24.709 [main] INFO   - Opened Login Page
+2019-44-27 17:44:32.881 [main] INFO   - Opened My Account Page
+2019-44-27 17:44:41.575 [main] INFO   - Opened Dresses Page
+2019-44-27 17:44:49.224 [main] INFO   - Opened Summer Dresses Page
+2019-44-27 17:44:49.374 [main] INFO   - Verified count of products from the message and from page
+2019-44-27 17:44:49.648 [main] INFO   - Selected only White dresses
+2019-44-27 17:44:49.759 [main] INFO   - Verified count of products from the message and from page again
+2019-44-27 17:44:51.214 [main] INFO   - Closed site

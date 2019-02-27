@@ -1,5 +1,12 @@
 plugins {
     id 'java'
+    id "com.github.sherter.google-java-format" version "0.8"
+}
+
+apply plugin: 'com.github.sherter.google-java-format'
+
+googleJavaFormat {
+    options style: 'AOSP'  
 }
 
 group 'com.aqacourses.project'
@@ -16,5 +23,6 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.9.8'
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'  
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.2'
 }
