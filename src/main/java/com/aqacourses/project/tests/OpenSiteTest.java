@@ -1,17 +1,17 @@
 package com.aqacourses.project.tests;
 
 import com.aqacourses.project.base.BaseTest;
+import com.aqacourses.project.enums.Categories;
 import com.aqacourses.project.pages.*;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class OpenSiteTest extends BaseTest {
 
-    /**
-     * Open site, login and logout
-     *
-     */
+    /** Open site, login and logout */
     @Test
-    public void testOpenSiteTest(){
+    @Ignore
+    public void testOpenSiteTest() {
 
         // Open site
         HomePage homePage = openSite();
@@ -43,11 +43,12 @@ public class OpenSiteTest extends BaseTest {
     }
 
     /**
-     * Open site, login, go to Dresses page, choose only white colors dresses and verify that quantity is correct.
-     * Then click to white color filter button and verify quantity again
+     * Open site, login, go to Dresses page, choose only white colors dresses and verify that
+     * quantity is correct. Then click to white color filter button and verify quantity again
      */
     @Test
-    public void testOpenDressPage (){
+    @Ignore
+    public void testOpenDressPage() {
 
         // Open site
         HomePage homePage = openSite();
@@ -77,20 +78,18 @@ public class OpenSiteTest extends BaseTest {
         summerDressesPage.clickToWhiteColorFilterButton();
         log("Selected only White dresses");
 
-        //Verify Count of products for white dresses
+        // Verify Count of products for white dresses
         summerDressesPage.verifyCountOfProductsOnDressesPage();
         log("Verified count of products from the message and from page again");
 
-        //Close site
+        // Close site
         closeSite();
         log("Closed site");
     }
 
-    /**
-     * Open site, Open T-Shirts page and add it to Card
-     */
+    /** Open site, Open T-Shirts page and add it to Card */
     @Test
-    public void testOpenCardTest (){
+    public void testOpenCardTest() {
         // Open site
         HomePage homePage = openSite();
         log("Opened site");
@@ -108,19 +107,23 @@ public class OpenSiteTest extends BaseTest {
         log("Opened T-Shirts Page");
 
         // Open Faded Short sleeve T-Shirt Page
-        FadedShortSleeveTShirtPage fadedShortSleeveTShirtPage = tShirtsPage.clickTotShirtProduct();
+        DetailsPage detailsPage =
+                tShirtsPage.clickToProductForDetails("Faded Short Sleeve T-shirts");
         log("Opened Faded Short sleeve T-Shirt Page");
 
         // Verify breadcrumb
-        fadedShortSleeveTShirtPage.verifyBreadCrumb();
+        detailsPage.verifyBreadCrumb(
+                Categories.WOMEN.getCategoryName()
+                        + Categories.TOPS.getCategoryName()
+                        + Categories.TSHIRTS.getCategoryName());
         log("Verified breadcrumb");
 
         // Add Faded Short Sleeve T-Shirt
-        fadedShortSleeveTShirtPage.clickAddToCardButton();
+        detailsPage.clickAddToCardButton();
         log("Opened information dialog");
 
         // Click to Proceed To Check Out Button and open Shopping Card Page
-        ShoppingCardPage shoppingCardPage = fadedShortSleeveTShirtPage.clickToProceedToCheckOutButton();
+        ShoppingCardPage shoppingCardPage = detailsPage.clickToProceedToCheckOutButton();
         log("Opened shopping card page");
 
         // Increase quantity
@@ -139,7 +142,7 @@ public class OpenSiteTest extends BaseTest {
         shoppingCardPage.verifyAlertMessage();
         log("Verified alert message");
 
-        //Close site
+        // Close site
         closeSite();
         log("Closed site");
     }

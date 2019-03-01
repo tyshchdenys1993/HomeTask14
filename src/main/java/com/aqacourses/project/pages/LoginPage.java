@@ -18,7 +18,7 @@ public class LoginPage extends AbstractPage {
     @FindBy(xpath = "//button[@id='SubmitLogin']")
     private WebElement submitButton;
 
-    @FindBy (xpath = "//span[@class='navigation_page']")
+    @FindBy(xpath = "//span[@class='navigation_page']")
     private WebElement loginPageLocator;
 
     protected BaseTest testClass;
@@ -32,14 +32,15 @@ public class LoginPage extends AbstractPage {
     public LoginPage(BaseTest testClass) {
         super(testClass);
         this.testClass = testClass;
-        PageFactory.initElements(testClass.getDriver(),this);
+        PageFactory.initElements(testClass.getDriver(), this);
     }
 
     /**
      * Method for login user
+     *
      * @return
      */
-    public AccountPage login(){
+    public AccountPage login() {
 
         testClass.waitTillElementIsVisible(emailField);
         emailField.sendKeys(YamlParser.getYamlData().getEmail());
@@ -49,11 +50,10 @@ public class LoginPage extends AbstractPage {
         return new AccountPage(testClass);
     }
 
-    /**
-     * Method for verifying that page is correct
-     */
-    public void verifyLoginPage(){
+    /** Method for verifying that page is correct */
+    public void verifyLoginPage() {
         testClass.waitTillElementIsVisible(loginPageLocator);
-        Assert.assertEquals("You are not on the login page", loginPageText, loginPageLocator.getText() );
+        Assert.assertEquals(
+                "You are not on the login page", loginPageText, loginPageLocator.getText());
     }
 }

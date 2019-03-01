@@ -11,22 +11,23 @@ public abstract class AbstractPage {
     @FindBy(xpath = "//a[@class='login']")
     private WebElement signInButton;
 
-    @FindBy (xpath = "//a[@class='logout']")
+    @FindBy(xpath = "//a[@class='logout']")
     private WebElement logoutButton;
 
     @FindBy(xpath = "//a[@class='account']/span")
     private WebElement userName;
 
-    @FindBy (xpath = "//ul[contains(@class,'submenu-container')]/preceding-sibling::a[@title='Dresses']")
+    @FindBy(
+            xpath =
+                    "//ul[contains(@class,'submenu-container')]/preceding-sibling::a[@title='Dresses']")
     private WebElement dressesButton;
 
     @FindBy(xpath = "//a[@title='Dresses']/following::a[@title='T-shirts']")
     private WebElement TShirtsButton;
 
-
     protected BaseTest testClass;
     private String name = "Den";
-    private String surname ="Tysh";
+    private String surname = "Tysh";
 
     /**
      * Constructor
@@ -43,7 +44,7 @@ public abstract class AbstractPage {
      *
      * @return instance of LoginPage
      */
-    public LoginPage clickSignInButton(){
+    public LoginPage clickSignInButton() {
         testClass.waitTillElementIsClickable(signInButton);
         signInButton.click();
         return new LoginPage(testClass);
@@ -54,16 +55,14 @@ public abstract class AbstractPage {
      *
      * @return instance of LoginPage
      */
-    public LoginPage clickSignOutButton(){
+    public LoginPage clickSignOutButton() {
         testClass.waitTillElementIsClickable(logoutButton);
         logoutButton.click();
         return new LoginPage(testClass);
     }
 
-    /**
-     * Verify that user name is correct
-     */
-    public void verifyUserName(){
+    /** Verify that user name is correct */
+    public void verifyUserName() {
         Assert.assertEquals(name + " " + surname, userName.getText());
     }
 
@@ -72,16 +71,15 @@ public abstract class AbstractPage {
      *
      * @return instance of DressesPage
      */
-
-   public DressesPage clickToDressesButton(){
+    public DressesPage clickToDressesButton() {
         testClass.waitTillElementIsClickable(dressesButton);
         dressesButton.click();
         return new DressesPage(testClass);
-   }
+    }
 
-   public TShirtsPage clickToTShirtsButton(){
-       testClass.waitTillElementIsClickable(TShirtsButton);
-       TShirtsButton.click();
-       return new TShirtsPage(testClass);
-   }
+    public TShirtsPage clickToTShirtsButton() {
+        testClass.waitTillElementIsClickable(TShirtsButton);
+        TShirtsButton.click();
+        return new TShirtsPage(testClass);
+    }
 }

@@ -2,6 +2,8 @@ package com.aqacourses.project.base;
 
 import com.aqacourses.project.pages.HomePage;
 import com.aqacourses.project.utils.YamlParser;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Rule;
@@ -11,24 +13,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class BaseTest {
 
     private WebDriver driver;
     private WebDriverWait wait;
 
-    @Rule
-    public RunTestRule runTestRule = new RunTestRule(this);
+    @Rule public RunTestRule runTestRule = new RunTestRule(this);
 
     private Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
 
-    /**
-     * Constructor
-     *
-     */
-    public BaseTest()      {
+    /** Constructor */
+    public BaseTest() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("disable-infobars");
@@ -39,6 +35,7 @@ public class BaseTest {
 
     /**
      * Return instance of Driver
+     *
      * @return WebDriver
      */
     public WebDriver getDriver() {
@@ -50,7 +47,7 @@ public class BaseTest {
      *
      * @param message
      */
-    public void log (String message){
+    public void log(String message) {
         logger.info(message);
     }
 
@@ -59,15 +56,16 @@ public class BaseTest {
      *
      * @param error
      */
-    public void error (String error){
+    public void error(String error) {
         logger.error(error);
     }
 
     /**
      * Get current date and time
+     *
      * @return
      */
-    public String getDateAndTime(){
+    public String getDateAndTime() {
         return new SimpleDateFormat("YYYY-MM-dd_HH-mm-ss").format(Calendar.getInstance().getTime());
     }
 
@@ -76,31 +74,44 @@ public class BaseTest {
      *
      * @return HomePage
      */
-    public HomePage openSite(){
+    public HomePage openSite() {
         driver.get(YamlParser.getYamlData().getUrl());
         return new HomePage(this);
     }
 
-    /**
-     * Driver quit
-     */
-    public void closeSite(){
+    /** Driver quit */
+    public void closeSite() {
         driver.quit();
     }
 
     /**
      * Wait till element is visible
+     *
      * @param webElement
      */
-    public void waitTillElementIsVisible(WebElement webElement){
+    public void waitTillElementIsVisible(WebElement webElement) {
         wait.until(ExpectedConditions.visibilityOf(webElement));
     }
 
     /**
      * Wait till element is clickable
+     *
      * @param webElement
      */
-    public void waitTillElementIsClickable (WebElement webElement){
+    public void waitTillElementIsClickable(WebElement webElement) {
         wait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
+
+    /**
+     * Wait till WebElement has attribute with a specific value
+     * @param webElement
+     * @param attribute
+     * @param value
+     */
+    public void waitTillAttributeIsChanged (WebElement webElement, String attribute, String value){
+        wait.until(ExpectedConditions.attributeToBe(webElement, attribute, value));
+    }
+
+
+
 }

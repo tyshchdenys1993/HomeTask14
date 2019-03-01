@@ -1,13 +1,12 @@
 package com.aqacourses.project.base;
 
+import java.io.File;
+import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
-import java.io.File;
-import java.io.IOException;
 
 public class RunTestRule extends TestWatcher {
 
@@ -23,8 +22,9 @@ public class RunTestRule extends TestWatcher {
     }
 
     /**
-     * Make screenshot and make driver.quit()
-     * Overriding this method you can add some actions on test failing
+     * Make screenshot and make driver.quit() Overriding this method you can add some actions on
+     * test failing
+     *
      * @param e
      * @param description
      */
@@ -45,12 +45,21 @@ public class RunTestRule extends TestWatcher {
         String methodName = description.getMethodName();
 
         // Create name of screenshot
-        String screenshotName = baseDir + "/" + className + "-" + methodName + "-" + testClass.getDateAndTime() + ".png";
+        String screenshotName =
+                baseDir
+                        + "/"
+                        + className
+                        + "-"
+                        + methodName
+                        + "-"
+                        + testClass.getDateAndTime()
+                        + ".png";
 
         File targetFile = new File(screenshotName);
 
         try {
-            FileUtils.copyFile(((TakesScreenshot) testClass.getDriver()).getScreenshotAs(OutputType.FILE),
+            FileUtils.copyFile(
+                    ((TakesScreenshot) testClass.getDriver()).getScreenshotAs(OutputType.FILE),
                     targetFile);
         } catch (IOException e1) {
             e1.printStackTrace();
@@ -59,12 +68,13 @@ public class RunTestRule extends TestWatcher {
         // Write down to log file error message
         testClass.error(e.getMessage());
 
-        //Driver quit on fail
+        // Driver quit on fail
         testClass.getDriver().quit();
     }
 
     /**
      * Make getDriver.quit()(whether passing or failing)
+     *
      * @param description
      */
     @Override

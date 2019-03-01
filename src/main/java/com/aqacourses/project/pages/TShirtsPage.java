@@ -1,13 +1,11 @@
 package com.aqacourses.project.pages;
 
 import com.aqacourses.project.base.BaseTest;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
 
 public class TShirtsPage extends AbstractPage {
+    private String PRODUCT_DETAILS_XPATH = "//h5[@itemprop='name']/a[contains(., '%s')]";
 
-    @FindBy(xpath = "//h5[@itemprop='name']/a")
-    WebElement fadedShortSleeveTShirt;
 
     /**
      * Constructor
@@ -20,12 +18,18 @@ public class TShirtsPage extends AbstractPage {
 
     /**
      * Open only one available product on the web site in T-Shirt page
-     * @return instance of Faded Short Sleeve T-Shirt Page
+     *
+     * @return instance of product Page
      */
-
-    public FadedShortSleeveTShirtPage clickTotShirtProduct(){
-        testClass.waitTillElementIsClickable(fadedShortSleeveTShirt);
-        fadedShortSleeveTShirt.click();
-        return new FadedShortSleeveTShirtPage(testClass);
+    public DetailsPage clickToProductForDetails(String productName) {
+        testClass.waitTillElementIsClickable(
+                testClass
+                        .getDriver()
+                        .findElement(By.xpath(String.format(PRODUCT_DETAILS_XPATH, productName))));
+        testClass
+                .getDriver()
+                .findElement(By.xpath(String.format(PRODUCT_DETAILS_XPATH, productName)))
+                .click();
+        return new DetailsPage(testClass);
     }
 }

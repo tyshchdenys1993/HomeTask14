@@ -1,23 +1,22 @@
 package com.aqacourses.project.pages;
 
 import com.aqacourses.project.base.BaseTest;
+import java.util.List;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
-
 public class DressesPage extends AbstractPage {
 
     @FindBy(xpath = "//div/a[@title='Summer Dresses']")
     private WebElement summerDressesButton;
 
-    @FindBy (xpath = "//span[@class='heading-counter']")
+    @FindBy(xpath = "//span[@class='heading-counter']")
     private WebElement countOfProductsTextField;
 
-    @FindBy (xpath = "//input[@id='layered_id_attribute_group_8']")
+    @FindBy(xpath = "//input[@id='layered_id_attribute_group_8']")
     private WebElement whiteColorFilterButton;
 
     private BaseTest testClass;
@@ -34,31 +33,28 @@ public class DressesPage extends AbstractPage {
         PageFactory.initElements(testClass.getDriver(), this);
     }
 
-    /**
-     * Click to Summer Dresses button
-     */
-
-    public SummerDressesPage clickToSummerDressesButton (){
+    /** Click to Summer Dresses button */
+    public SummerDressesPage clickToSummerDressesButton() {
         testClass.waitTillElementIsClickable(summerDressesButton);
         summerDressesButton.click();
         return new SummerDressesPage(testClass);
     }
 
-    /**
-     * Click to White color filter button
-     */
-    public void clickToWhiteColorFilterButton(){
+    /** Click to White color filter button */
+    public void clickToWhiteColorFilterButton() {
         testClass.waitTillElementIsClickable(whiteColorFilterButton);
         whiteColorFilterButton.click();
     }
 
-    /**
-     * Verify, that count o items in text field corresponds to count of products on the page
-     */
-    public void verifyCountOfProductsOnDressesPage(){
+    /** Verify, that count o items in text field corresponds to count of products on the page */
+    public void verifyCountOfProductsOnDressesPage() {
         testClass.waitTillElementIsVisible(countOfProductsTextField);
-        countOfProductsOnThePage = Integer.parseInt(countOfProductsTextField.getText().replaceAll("[^0-9]", ""));
-        List <WebElement> products = testClass.getDriver().findElements(By.xpath("//ul[contains(@class,'product_list')]/li"));
+        countOfProductsOnThePage =
+                Integer.parseInt(countOfProductsTextField.getText().replaceAll("[^0-9]", ""));
+        List<WebElement> products =
+                testClass
+                        .getDriver()
+                        .findElements(By.xpath("//ul[contains(@class,'product_list')]/li"));
         Assert.assertEquals(countOfProductsOnThePage, products.size());
     }
 }
