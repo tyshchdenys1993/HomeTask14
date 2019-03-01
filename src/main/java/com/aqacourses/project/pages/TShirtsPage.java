@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 public class TShirtsPage extends AbstractPage {
     private String PRODUCT_DETAILS_XPATH = "//h5[@itemprop='name']/a[contains(., '%s')]";
 
-
     /**
      * Constructor
      *

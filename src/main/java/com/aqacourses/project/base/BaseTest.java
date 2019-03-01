@@ -104,14 +104,12 @@ public class BaseTest {
 
     /**
      * Wait till WebElement has attribute with a specific value
+     *
      * @param webElement
      * @param attribute
      * @param value
      */
-    public void waitTillAttributeIsChanged (WebElement webElement, String attribute, String value){
+    public void waitTillAttributeIsChanged(WebElement webElement, String attribute, String value) {
         wait.until(ExpectedConditions.attributeToBe(webElement, attribute, value));
     }
-
-
-
 }

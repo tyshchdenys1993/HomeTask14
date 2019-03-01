@@ -22,6 +22,7 @@ public enum Categories {
 
     /**
      * Constructor
+     *
      * @param categoryName
      * @param categoryLink
      */

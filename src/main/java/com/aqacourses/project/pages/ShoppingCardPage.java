@@ -41,8 +41,9 @@ public class ShoppingCardPage extends AbstractPage {
     /** Method for increasing quantity of products */
     public void clickToIncreaseQuantityButton() {
         increaseQuantityButton.click();
-        int increasedQuantity = Integer.valueOf(quantityField.getAttribute("value"))+1;
-        testClass.waitTillAttributeIsChanged(quantityField, "value", String.valueOf(increasedQuantity));
+        int increasedQuantity = Integer.valueOf(quantityField.getAttribute("value")) + 1;
+        testClass.waitTillAttributeIsChanged(
+                quantityField, "value", String.valueOf(increasedQuantity));
     }
 
     /** Method for verifying total price after increasing quantity of products */
