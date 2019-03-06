@@ -1,31 +1,38 @@
-package com.aqacourses.project.pages;
+package com.aqacourses.serenity.pages;
 
-import com.aqacourses.project.base.BaseTest;
+import com.google.common.io.BaseEncoding;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DetailsPage extends AbstractPage {
 
+    WebDriverWait wait = new WebDriverWait(getDriver(), 10);
+
     @FindBy(xpath = "//div[contains(@class,'breadcrumb')]")
-    WebElement breadCrumb;
+    private WebElement breadCrumb;
 
     @FindBy(xpath = "//button[@class='exclusive']")
-    WebElement addToCardButton;
+    private WebElement addToCardButton;
 
     @FindBy(xpath = "//a[@title='Proceed to checkout']")
-    WebElement proceedToCheckoutButton;
+    private WebElement proceedToCheckoutButton;
 
     @FindBy(xpath = "//h1[@itemprop='name']")
-    WebElement productName;
+    private WebElement productName;
 
+    private WebElement layerCartDialog = getDriver().findElement(By.xpath("//div[@id='layer_cart']"));
     /**
      * Constructor
      *
-     * @param testClass
+     * @param driver
      */
-    public DetailsPage(BaseTest testClass) {
-        super(testClass);
+    public DetailsPage(WebDriver driver) {
+        super(driver);
     }
 
     /** Verify that bread crumb is correct */
@@ -38,6 +45,7 @@ public class DetailsPage extends AbstractPage {
     /** Method for clicking to Add button */
     public void clickAddToCardButton() {
         addToCardButton.click();
+        wait.until(ExpectedConditions.visibilityOf(layerCartDialog));
     }
 
     /**
@@ -45,9 +53,7 @@ public class DetailsPage extends AbstractPage {
      *
      * @return instance of shopping card page
      */
-    public ShoppingCardPage clickToProceedToCheckOutButton() {
-        testClass.waitTillElementIsVisible(proceedToCheckoutButton);
+    public void clickToProceedToCheckOutButton() {
         proceedToCheckoutButton.click();
-        return new ShoppingCardPage(testClass);
     }
 }

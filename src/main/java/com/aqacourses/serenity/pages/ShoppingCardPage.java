@@ -1,19 +1,19 @@
-package com.aqacourses.project.pages;
+package com.aqacourses.serenity.pages;
 
-import com.aqacourses.project.base.BaseTest;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ShoppingCardPage extends AbstractPage {
+public class ShoppingCardPage extends AbstractPage{
+
+    WebDriverWait wait =  new WebDriverWait(getDriver(),10);
 
     @FindBy(xpath = "//a[@title='Add']")
     private WebElement increaseQuantityButton;
-
-    @FindBy(
-            xpath =
-                    "//input[contains(@class,'cart_quantity_input form-control')]/preceding-sibling::input")
-    private WebElement quantityField;
 
     @FindBy(xpath = "//td[@class='cart_unit']/span/span")
     private WebElement unitPrice;
@@ -24,26 +24,25 @@ public class ShoppingCardPage extends AbstractPage {
     @FindBy(xpath = "//a[@title='Delete']")
     private WebElement deleteFadedTShort;
 
-    @FindBy(xpath = "//p[contains(@class,'alert-warning')]")
-    private WebElement alertField;
+    private WebElement quantityField =  getDriver().findElement(By.xpath("//input[contains(@class,'cart_quantity_input form-control')]/preceding-sibling::input"));
+
+    private WebElement alertField = getDriver().findElement(By.xpath("//p[contains(@class,'alert-warning')]"));
 
     private String alertMessage = "Your shopping cart is empty.";
 
     /**
      * Constructor
      *
-     * @param testClass
+     * @param driver
      */
-    public ShoppingCardPage(BaseTest testClass) {
-        super(testClass);
+    public ShoppingCardPage(WebDriver driver) {
+        super(driver);
     }
-
     /** Method for increasing quantity of products */
-    public void clickToIncreaseQuantityButton() {
+    public void clickToIncreaseQuantityButton(){
         increaseQuantityButton.click();
-        int increasedQuantity = Integer.valueOf(quantityField.getAttribute("value")) + 1;
-        testClass.waitTillAttributeIsChanged(
-                quantityField, "value", String.valueOf(increasedQuantity));
+        int increasedQuantity = Integer.valueOf(quantityField.getAttribute("value")) +1;
+        wait.until(ExpectedConditions.attributeToBe(quantityField, "value", String.valueOf(increasedQuantity)));
     }
 
     /** Method for verifying total price after increasing quantity of products */
@@ -55,14 +54,14 @@ public class ShoppingCardPage extends AbstractPage {
         Assert.assertEquals(totalPriceField, priceForUnitMultipliedQuantity, 0);
     }
 
-    /** Method for deleting added product */
-    public void clickDeleteFadedTShort() {
-        deleteFadedTShort.click();
-    }
+  /** Method for deleting added product */
+  public void clickDeleteFadedTShort() {
+    deleteFadedTShort.click();
+      wait.until(ExpectedConditions.visibilityOf(alertField));
+  }
 
     /** Method for verifying alert message */
     public void verifyAlertMessage() {
-        testClass.waitTillElementIsVisible(alertField);
         Assert.assertEquals(alertMessage, alertField.getText());
     }
 }

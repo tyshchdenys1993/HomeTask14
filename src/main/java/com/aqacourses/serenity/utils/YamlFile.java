@@ -1,22 +1,20 @@
-package com.aqacourses.project.utils;
+package com.aqacourses.serenity.utils;
 
 public class YamlFile {
-
     private String url;
     private String email;
     private String password;
+
     /**
-     * Get url from yaml file
-     *
+     * Get URL from yaml file
      * @return String represents URL
      */
-    public String getUrl() {
+    public String getUrl(){
         return url;
     }
 
     /**
      * Get email from yaml file
-     *
      * @return String represents email
      */
     public String getEmail() {
@@ -25,7 +23,6 @@ public class YamlFile {
 
     /**
      * Get password from yaml file
-     *
      * @return String represents password
      */
     public String getPassword() {
