@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
+
 public class ShoppingCardPage extends AbstractPage{
 
     WebDriverWait wait =  new WebDriverWait(getDriver(),10);
@@ -24,9 +26,8 @@ public class ShoppingCardPage extends AbstractPage{
     @FindBy(xpath = "//a[@title='Delete']")
     private WebElement deleteFadedTShort;
 
-    private WebElement quantityField =  getDriver().findElement(By.xpath("//input[contains(@class,'cart_quantity_input form-control')]/preceding-sibling::input"));
-
-    private WebElement alertField = getDriver().findElement(By.xpath("//p[contains(@class,'alert-warning')]"));
+    @FindBy(xpath = "//p[contains(@class,'alert-warning')]")
+    private WebElement alertField;
 
     private String alertMessage = "Your shopping cart is empty.";
 
@@ -41,8 +42,13 @@ public class ShoppingCardPage extends AbstractPage{
     /** Method for increasing quantity of products */
     public void clickToIncreaseQuantityButton(){
         increaseQuantityButton.click();
-        int increasedQuantity = Integer.valueOf(quantityField.getAttribute("value")) +1;
-        wait.until(ExpectedConditions.attributeToBe(quantityField, "value", String.valueOf(increasedQuantity)));
+        int increasedQuantity = Integer.valueOf(getDriver().findElement(By
+                .xpath("//input[contains(@class,'cart_quantity_input form-control')]/preceding-sibling::input"))
+                .getAttribute("value")) +1;
+        wait.until(ExpectedConditions.attributeToBe(getDriver().findElement(By
+                .xpath("//input[contains(@class,'cart_quantity_input form-control')]/preceding-sibling::input"))
+                , "value"
+                , String.valueOf(increasedQuantity)));
     }
 
     /** Method for verifying total price after increasing quantity of products */
@@ -50,14 +56,16 @@ public class ShoppingCardPage extends AbstractPage{
         double totalPriceField = Double.valueOf(totalPrice.getText().replace("$", ""));
         double priceForUnitMultipliedQuantity =
                 Double.valueOf(unitPrice.getText().replace("$", ""))
-                        * Double.valueOf(quantityField.getAttribute("value"));
+                        * Double.valueOf(getDriver().findElement(By
+                        .xpath("//input[contains(@class,'cart_quantity_input form-control')]/preceding-sibling::input"))
+                        .getAttribute("value"));
         Assert.assertEquals(totalPriceField, priceForUnitMultipliedQuantity, 0);
     }
 
   /** Method for deleting added product */
   public void clickDeleteFadedTShort() {
     deleteFadedTShort.click();
-      wait.until(ExpectedConditions.visibilityOf(alertField));
+    waitFor(visibilityOf(alertField));
   }
 
     /** Method for verifying alert message */

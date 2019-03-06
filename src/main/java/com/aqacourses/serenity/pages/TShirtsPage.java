@@ -17,6 +17,10 @@ public class TShirtsPage extends AbstractPage {
     }
 
 
+    /**
+     * Click to product and get product details page
+     * @param productName
+     */
     public void clickToProductForDetails(String productName) {
         getDriver().findElement(By.xpath(String.format(PRODUCT_DETAILS_XPATH, productName))).click();
     }

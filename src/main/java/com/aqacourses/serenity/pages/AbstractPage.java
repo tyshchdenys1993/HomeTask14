@@ -37,6 +37,9 @@ public class AbstractPage extends PageObject {
         signInButton.click();
     }
 
+    /**
+     * Click T-Shirts button
+     */
     public void clickTShirtsButton(){
         tShirtsButton.click();
     }

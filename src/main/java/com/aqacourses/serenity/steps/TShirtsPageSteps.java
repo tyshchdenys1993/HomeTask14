@@ -17,6 +17,10 @@ public class TShirtsPageSteps extends ScenarioSteps {
         super(pages);
     }
 
+    /**
+     *  Get T-Shirts page
+     * @return TShirtsPage
+     */
     public TShirtsPage onTShirtsPage (){
         return pages().get(TShirtsPage.class);
     }

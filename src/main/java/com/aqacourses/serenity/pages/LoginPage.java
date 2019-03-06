@@ -24,16 +24,24 @@ public class LoginPage extends AbstractPage {
         super(driver);
     }
 
+    /**
+     * Enter e-mail
+     */
     public void enterEmail(){
         emailField.sendKeys(YamlParser.getYamlData().getEmail());
     }
 
+    /**
+     * Enter Passsword
+     */
     public void enterPassword(){
         passwordField.sendKeys(YamlParser.getYamlData().getPassword());
     }
 
+    /**
+     * Click to submit button for login
+     */
     public void clickToSubmitButton(){
         submitButton.click();
     }
-
 }

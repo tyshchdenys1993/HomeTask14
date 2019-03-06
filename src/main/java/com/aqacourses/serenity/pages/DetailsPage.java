@@ -1,6 +1,5 @@
 package com.aqacourses.serenity.pages;
 
-import com.google.common.io.BaseEncoding;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +24,6 @@ public class DetailsPage extends AbstractPage {
     @FindBy(xpath = "//h1[@itemprop='name']")
     private WebElement productName;
 
-    private WebElement layerCartDialog = getDriver().findElement(By.xpath("//div[@id='layer_cart']"));
     /**
      * Constructor
      *
@@ -45,7 +43,7 @@ public class DetailsPage extends AbstractPage {
     /** Method for clicking to Add button */
     public void clickAddToCardButton() {
         addToCardButton.click();
-        wait.until(ExpectedConditions.visibilityOf(layerCartDialog));
+        wait.until(ExpectedConditions.visibilityOf(getDriver().findElement(By.xpath("//div[@id='layer_cart']"))));
     }
 
     /**
