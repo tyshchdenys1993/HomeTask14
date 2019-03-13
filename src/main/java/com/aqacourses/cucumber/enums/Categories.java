@@ -1,4 +1,4 @@
-package com.aqacourses.serenity.enums;
+package com.aqacourses.cucumber.enums;
 
 public enum Categories {
     WOMEN("Women", "http://automationpractice.com/index.php?id_category=3&controller=category"),
@@ -26,22 +26,24 @@ public enum Categories {
      * @param categoryName
      * @param categoryLink
      */
-    Categories(String categoryName, String categoryLink){
+    Categories(String categoryName, String categoryLink) {
         this.categoryName = categoryName;
         this.categoryLink = categoryLink;
     }
 
     /**
-     * Get Catrgory Name
-     * @return
+     * Category name getter
+     *
+     * @return categoryName
      */
     public String getCategoryName() {
         return categoryName;
     }
 
     /**
-     * Get Category Link
-     * @return
+     * Category link getter
+     *
+     * @return categoryLink
      */
     public String getCategoryLink() {
         return categoryLink;

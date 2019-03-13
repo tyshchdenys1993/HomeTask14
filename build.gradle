@@ -1,44 +1,30 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        jcenter()
-    }
-    dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.40")
-    }
-}
-
 plugins {
-    id 'com.github.sherter.google-java-format' version '0.6'
+    id 'java'
+    id "com.github.sherter.google-java-format" version "0.8"
 }
 
-repositories {
-    mavenLocal()
-    jcenter()
-}
-
-
-group 'com.aqacourses.serenity'
-version '1.0-SNAPSHOT'
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'net.serenity-bdd.aggregator'
 apply plugin: 'com.github.sherter.google-java-format'
 
 googleJavaFormat {
     options style: 'AOSP'
 }
 
+group 'com.aqacourses.cucumber'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
 dependencies {
     compile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'net.serenity-bdd', name: 'serenity-core', version: '2.0.40'
-    compile group: 'net.serenity-bdd', name: 'serenity-junit', version: '2.0.40'
-    compile group: 'org.assertj', name: 'assertj-core', version: '3.12.0'
-    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.26'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
     compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.9.8'
     compile group: 'commons-io', name: 'commons-io', version: '2.6'
+    compile group: 'io.cucumber', name: 'cucumber-junit', version: '4.2.6'
+    compile group: 'io.cucumber', name: 'cucumber-java', version: '4.2.6'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.2'
 }
-gradle.startParameter.continueOnFailure = true

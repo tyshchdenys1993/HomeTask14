@@ -1,11 +1,12 @@
-package com.aqacourses.serenity.pages;
+package com.aqacourses.cucumber.pages;
 
-import com.aqacourses.serenity.utils.YamlParser;
-import org.openqa.selenium.WebDriver;
+import com.aqacourses.cucumber.base.BaseTest;
+import com.aqacourses.cucumber.utils.YamlParser;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends AbstractPage {
+
     @FindBy(xpath = "//input[@id='email']")
     private WebElement emailField;
 
@@ -18,30 +19,17 @@ public class LoginPage extends AbstractPage {
     /**
      * Constructor
      *
-     * @param driver
+     * @param testClass
      */
-    public LoginPage(WebDriver driver) {
-        super(driver);
+    public LoginPage(BaseTest testClass) {
+        super(testClass);
     }
 
-    /**
-     * Enter e-mail
-     */
-    public void enterEmail(){
+    public AccountPage login() {
+        testClass.waitTillElementIsClickable(emailField);
         emailField.sendKeys(YamlParser.getYamlData().getEmail());
-    }
-
-    /**
-     * Enter Passsword
-     */
-    public void enterPassword(){
         passwordField.sendKeys(YamlParser.getYamlData().getPassword());
-    }
-
-    /**
-     * Click to submit button for login
-     */
-    public void clickToSubmitButton(){
         submitButton.click();
+        return new AccountPage(testClass);
     }
 }
