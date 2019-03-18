@@ -28,7 +28,7 @@ public class RunTestRule extends TestWatcher {
      */
     @Override
     protected void finished(Description description) {
-        testClass.closeSite();
+        testClass.getDriver().quit();
     }
 
     /**

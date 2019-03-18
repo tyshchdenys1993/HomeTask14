@@ -32,7 +32,7 @@ public class ProductDetailsPage extends AbstractPage {
      * @return
      */
     public String getBreadCrumbText(){
-       return breadCrumb.getText().replaceAll("[^a-zA-Z-\\s]", "").trim();
+       return breadCrumb.getText().replaceAll("[^a-zA-Z-\\s\\S]", "").trim();
     }
 
     /**

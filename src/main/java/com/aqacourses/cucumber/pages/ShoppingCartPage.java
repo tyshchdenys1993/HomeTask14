@@ -52,14 +52,6 @@ public class ShoppingCartPage extends AbstractPage {
                 * Double.valueOf(quantityField.getAttribute("value"));
     }
 
-    /**
-     * Get price from price field
-     * @return
-     */
-    public Double getExpectedPrice(){
-        return Double.valueOf(totalPrice.getText().replace("$", ""));
-    }
-
     /** Method for deleting added product */
     public void clickDeleteFadedTShort() {
         deleteFadedTShort.click();

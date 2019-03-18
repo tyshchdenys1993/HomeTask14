@@ -25,50 +25,58 @@ public class TestClassCucumber extends BaseTest {
     public void theUserOpenSiteAndSeesHomePage(){
         homePage = openSite();
     }
+
     @When("He clicks Sign In link sees Login page")
     public void heClicksSignInLinkAndSeesLoginPage(){
         loginPage = homePage.clickToLoginButton();
     }
+
     @When("He loging in sees account page")
     public void heLogingInAndSeesAcountPage(){
         accountPage = loginPage.login();
     }
+
     @When("He clicks to T-Shirts button sees T-Shirts Page")
     public void heClicksToTShirtsButtonAndSeesTShirtsPage(){
         tShirtPage = accountPage.clickToTShirtsbutton();
     }
+
     @When("He clicks to '([^\"]*)' sees Product Details Page")
     public void heClicksToFadedShortSleeveTShirtsButtonAnsSeesProductDetailsPage(String productName){
         productDetailsPage = tShirtPage.clickToProductForDetails(productName);
     }
+
     @When("He verify breadcrumb on Product Details Page")
     public void heVerifyBreadCrumb(){
-        actualBreadCrumb = productDetailsPage.getBreadCrumbText();
+       actualBreadCrumb = productDetailsPage.getBreadCrumbText();
     }
-    @Then("Breadcrumb is correct")
-    public void breadCrumbIs(){
-        Assert.assertEquals(categories.WOMEN.getCategoryName()
-                + categories.TOPS.getCategoryName()
-                + categories.TSHIRTS.getCategoryName()
-                + productDetailsPage.getProductName(), actualBreadCrumb);
+
+    @Then("Breadcrumb is '([^\"]*)'")
+    public void breadCrumbIs(String expectedBreadCrumb){
+        Assert.assertEquals(expectedBreadCrumb, actualBreadCrumb);
     }
+
     @When("He clicks to Add to Cart sees dialog with product")
     public void heClicksToAddToCardButtonAndSeesDialogWithProduct(){
         productDetailsPage.clickToAddToCartButton();
     }
+
     @When("He clicks to Proceed to Checkout button sees Shopping Cart Page")
     public void heClicksToProceedToCheckOutButtonAndSeesShoppingCartPage(){
         shoppingCartPage = productDetailsPage.clickToProceedToCheckoutButton();
     }
-    @When("He clicks to \"+\" button quntity should be increased by 1")
+
+    @When("He clicks to \"+\" button quantity should be increased by 1")
     public void heClicksToProceedToCheckOutButtonAndQuantityIncreased(){
         shoppingCartPage.clickToIncreaseQuantityButton();
         actualTotalPrice = shoppingCartPage.getTotalPrice();
     }
-    @Then("Total price should be increased")
-    public void totalPriceIsIncreased(){
-        Assert.assertEquals(shoppingCartPage.getExpectedPrice(), actualTotalPrice);
+
+    @Then("Total price should be changed to '([^\"]*)'")
+    public void totalPriceIsIncreased(Double expectedPrice){
+        Assert.assertEquals(expectedPrice, actualTotalPrice);
     }
+
     @When("He deletes product from Cart")
     public void heDeletedProductFromcart(){
         shoppingCartPage.clickDeleteFadedTShort();

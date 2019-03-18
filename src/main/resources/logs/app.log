@@ -1,0 +1,27 @@
+2019-14-12 10:14:57.368 [main] ERROR  - null
+2019-16-12 10:16:40.522 [main] INFO   - Opened site
+2019-16-12 10:16:43.333 [main] INFO   - Opened Login Page
+2019-16-12 10:16:46.672 [main] INFO   - Opened My Account Page
+2019-16-12 10:16:49.269 [main] INFO   - Opened T-Shirts Page
+2019-16-12 10:16:51.234 [main] INFO   - Opened Faded Short sleeve T-Shirt Page
+2019-16-12 10:16:51.310 [main] INFO   - Verified breadcrumb
+2019-16-12 10:16:51.441 [main] INFO   - Opened information dialog
+2019-16-12 10:16:54.172 [main] INFO   - Opened shopping card page
+2019-16-12 10:16:55.894 [main] INFO   - Clicked Increase quantity button
+2019-16-12 10:16:55.984 [main] INFO   - Verified total price with unit price multiplied with quantity
+2019-16-12 10:16:56.061 [main] INFO   - Deleted Faded Short sleeve T-Shirt
+2019-16-12 10:16:57.932 [main] INFO   - Verified alert message
+2019-16-12 10:16:59.238 [main] INFO   - Closed site
+2019-17-12 10:17:45.977 [main] INFO   - Opened site
+2019-17-12 10:17:47.991 [main] INFO   - Opened Login Page
+2019-17-12 10:17:51.034 [main] INFO   - Opened My Account Page
+2019-17-12 10:17:53.336 [main] INFO   - Opened T-Shirts Page
+2019-17-12 10:17:55.611 [main] INFO   - Opened Faded Short sleeve T-Shirt Page
+2019-17-12 10:17:55.706 [main] INFO   - Verified breadcrumb
+2019-17-12 10:17:55.840 [main] INFO   - Opened information dialog
+2019-17-12 10:17:59.707 [main] INFO   - Opened shopping card page
+2019-18-12 10:18:00.964 [main] INFO   - Clicked Increase quantity button
+2019-18-12 10:18:01.054 [main] INFO   - Verified total price with unit price multiplied with quantity
+2019-18-12 10:18:01.118 [main] INFO   - Deleted Faded Short sleeve T-Shirt
+2019-18-12 10:18:04.511 [main] INFO   - Verified alert message
+2019-18-12 10:18:05.805 [main] INFO   - Closed site
