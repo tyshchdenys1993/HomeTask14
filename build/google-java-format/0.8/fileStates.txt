@@ -1,0 +1,16 @@
+src/main/java/com/aqacourses/project/pages/TShirtsPage.java,1552553944654712000,967,FORMATTED
+src/main/java/com/aqacourses/project/tests/OpenSiteSelenideTest.java,1552553944725985000,854,FORMATTED
+src/main/java/com/aqacourses/project/pages/ShoppingCardPage.java,1552553944526812000,2421,FORMATTED
+src/main/java/com/aqacourses/project/enums/Categories.java,1551455968480476000,1580,FORMATTED
+src/main/java/com/aqacourses/project/pages/DressesPage.java,1552553944384265000,2062,FORMATTED
+src/main/java/com/aqacourses/project/tests/OpenSiteTest.java,1551451962133534000,4915,FORMATTED
+src/main/java/com/aqacourses/project/base/BaseTest.java,1552554402396419000,3335,FORMATTED
+src/main/java/com/aqacourses/project/utils/YamlFile.java,1550843006221504000,644,FORMATTED
+src/main/java/com/aqacourses/project/pages/AccountPage.java,1551370508574125000,294,FORMATTED
+src/main/java/com/aqacourses/project/pages/AbstractPage.java,1552553944117726000,2441,FORMATTED
+src/main/java/com/aqacourses/project/base/RunTestRule.java,1552548063718510000,1040,FORMATTED
+src/main/java/com/aqacourses/project/pages/SummerDressesPage.java,1551191985845628000,303,FORMATTED
+src/main/java/com/aqacourses/project/pages/HomePage.java,1550766262521652000,288,FORMATTED
+src/main/java/com/aqacourses/project/pages/DetailsPage.java,1552553944299323000,1584,FORMATTED
+src/main/java/com/aqacourses/project/utils/YamlParser.java,1551370508774277000,816,FORMATTED
+src/main/java/com/aqacourses/project/pages/LoginPage.java,1552553944458467000,1772,FORMATTED
