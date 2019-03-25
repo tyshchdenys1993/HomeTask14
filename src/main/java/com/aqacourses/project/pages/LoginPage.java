@@ -1,13 +1,11 @@
 package com.aqacourses.project.pages;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
-
 import com.aqacourses.project.base.BaseTest;
 import com.aqacourses.project.utils.YamlParser;
-import com.codeborne.selenide.Condition;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends AbstractPage {
 
@@ -34,7 +32,7 @@ public class LoginPage extends AbstractPage {
     public LoginPage(BaseTest testClass) {
         super(testClass);
         this.testClass = testClass;
-        page(this);
+        PageFactory.initElements(testClass.getDriver(), this);
     }
 
     /**
@@ -43,17 +41,19 @@ public class LoginPage extends AbstractPage {
      * @return
      */
     public AccountPage login() {
+
         testClass.waitTillElementIsVisible(emailField);
-        $(emailField).sendKeys(YamlParser.getYamlData().getEmail());
-        $(passwordField).sendKeys(YamlParser.getYamlData().getPassword());
+        emailField.sendKeys(YamlParser.getYamlData().getEmail());
+        passwordField.sendKeys(YamlParser.getYamlData().getPassword());
         testClass.waitTillElementIsClickable(submitButton);
-        $(submitButton).click();
-        return page(AccountPage.class);
+        submitButton.click();
+        return new AccountPage(testClass);
     }
 
     /** Method for verifying that page is correct */
     public void verifyLoginPage() {
         testClass.waitTillElementIsVisible(loginPageLocator);
-        $(loginPageLocator).shouldBe(Condition.text(loginPageText));
+        Assert.assertEquals(
+                "You are not on the login page", loginPageText, loginPageLocator.getText());
     }
 }

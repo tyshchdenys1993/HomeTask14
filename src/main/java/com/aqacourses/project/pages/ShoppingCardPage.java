@@ -1,7 +1,5 @@
 package com.aqacourses.project.pages;
 
-import static com.codeborne.selenide.Selenide.$;
-
 import com.aqacourses.project.base.BaseTest;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -42,29 +40,29 @@ public class ShoppingCardPage extends AbstractPage {
 
     /** Method for increasing quantity of products */
     public void clickToIncreaseQuantityButton() {
-        $(increaseQuantityButton).click();
-        int increasedQuantity = Integer.valueOf($(quantityField).attr("value")) + 1;
+        increaseQuantityButton.click();
+        int increasedQuantity = Integer.valueOf(quantityField.getAttribute("value")) + 1;
         testClass.waitTillAttributeIsChanged(
-                $(quantityField), "value", String.valueOf(increasedQuantity));
+                quantityField, "value", String.valueOf(increasedQuantity));
     }
 
     /** Method for verifying total price after increasing quantity of products */
     public void verifyPriceIncreasing() {
-        double totalPriceField = Double.valueOf($(totalPrice).text().replace("$", ""));
+        double totalPriceField = Double.valueOf(totalPrice.getText().replace("$", ""));
         double priceForUnitMultipliedQuantity =
-                Double.valueOf($(unitPrice).text().replace("$", ""))
-                        * Double.valueOf($(quantityField).attr("value"));
+                Double.valueOf(unitPrice.getText().replace("$", ""))
+                        * Double.valueOf(quantityField.getAttribute("value"));
         Assert.assertEquals(totalPriceField, priceForUnitMultipliedQuantity, 0);
     }
 
     /** Method for deleting added product */
     public void clickDeleteFadedTShort() {
-        $(deleteFadedTShort).click();
+        deleteFadedTShort.click();
     }
 
     /** Method for verifying alert message */
     public void verifyAlertMessage() {
         testClass.waitTillElementIsVisible(alertField);
-        Assert.assertEquals(alertMessage, $(alertField).text());
+        Assert.assertEquals(alertMessage, alertField.getText());
     }
 }

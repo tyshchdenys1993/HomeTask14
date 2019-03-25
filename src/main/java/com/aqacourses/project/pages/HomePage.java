@@ -2,10 +2,7 @@ package com.aqacourses.project.pages;
 
 import com.aqacourses.project.base.BaseTest;
 
-import static com.codeborne.selenide.Selenide.page;
-
 public class HomePage extends AbstractPage {
-
 
     /**
      * Constructor
@@ -14,6 +11,5 @@ public class HomePage extends AbstractPage {
      */
     public HomePage(BaseTest testClass) {
         super(testClass);
-        page(this);
     }
 }

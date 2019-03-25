@@ -1,4 +1,0 @@
-#Generated; DO NOT CHANGE!!!
-#Thu Mar 14 11:54:12 EET 2019
-options=AOSP_STYLE
-toolVersion=1.6

@@ -2,41 +2,39 @@ package com.aqacourses.project.base;
 
 import com.aqacourses.project.pages.HomePage;
 import com.aqacourses.project.utils.YamlParser;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.junit.ScreenShooter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Rule;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTest {
 
     private WebDriver driver;
-    private Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
+    private WebDriverWait wait;
+    private String actualWindow;
+    private Set<String> windows;
+    private String newWindow = null;
 
     @Rule public RunTestRule runTestRule = new RunTestRule(this);
 
-    @Rule public ScreenShooter screenShooter = ScreenShooter.failedTests();
+    private Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
 
     /** Constructor */
     public BaseTest() {
-
-        Configuration.startMaximized = true;
-
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        System.setProperty("selenide.browser", "Chrome");
-//        ChromeOptions options = new ChromeOptions();
-//        driver = new ChromeDriver(options);
-//
-//        setWebDriver(driver);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        wait = new WebDriverWait(driver, 10);
     }
 
     /**
@@ -45,7 +43,7 @@ public class BaseTest {
      * @return WebDriver
      */
     public WebDriver getDriver() {
-        return getWebDriver();
+        return driver;
     }
 
     /**
@@ -81,13 +79,13 @@ public class BaseTest {
      * @return HomePage
      */
     public HomePage openSite() {
-        open(YamlParser.getYamlData().getUrl());
-        return page(HomePage.class);
+        driver.get(YamlParser.getYamlData().getUrl());
+        return new HomePage(this);
     }
 
     /** Driver quit */
     public void closeSite() {
-        close();
+        driver.quit();
     }
 
     /**
@@ -96,7 +94,7 @@ public class BaseTest {
      * @param webElement
      */
     public void waitTillElementIsVisible(WebElement webElement) {
-        $(webElement).is(Condition.visible);
+        wait.until(ExpectedConditions.visibilityOf(webElement));
     }
 
     /**
@@ -105,7 +103,7 @@ public class BaseTest {
      * @param webElement
      */
     public void waitTillElementIsClickable(WebElement webElement) {
-        $(webElement).is(Condition.enabled);
+        wait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
 
     /**
@@ -116,6 +114,23 @@ public class BaseTest {
      * @param value
      */
     public void waitTillAttributeIsChanged(WebElement webElement, String attribute, String value) {
-        $(webElement).is(Condition.attribute(attribute, value));
+        wait.until(ExpectedConditions.attributeToBe(webElement, attribute, value));
+    }
+
+    /** Switch to the new window */
+    public void switchToNewWindow() {
+        actualWindow = getDriver().getWindowHandle();
+        windows = getDriver().getWindowHandles();
+        for (String window : windows) {
+            if (!window.equals(actualWindow)) {
+                newWindow = window;
+            }
+        }
+        getDriver().switchTo().window(newWindow);
+    }
+
+    /** Switch to the already opened window */
+    public void switchToActualWindow() {
+        getDriver().switchTo().window(actualWindow);
     }
 }

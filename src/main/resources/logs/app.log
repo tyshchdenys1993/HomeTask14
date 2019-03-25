@@ -406,9 +406,369 @@ Session ID: 31ea5b6e7ba760c71f8948a50682c817
 2019-52-05 10:52:54.019 [main] INFO   - Deleted Faded Short sleeve T-Shirt
 2019-52-05 10:52:59.352 [main] INFO   - Verified alert message
 2019-53-05 10:53:01.061 [main] INFO   - Closed site
-2019-45-14 13:45:41.581 [main] ERROR  - Failed to create new instance of class com.aqacourses.project.pages.HomePage
-2019-53-14 13:53:27.043 [main] ERROR  - Failed to create new instance of class com.aqacourses.project.pages.HomePage
-2019-19-15 10:19:55.716 [main] ERROR  - Failed to create new instance of class com.aqacourses.project.pages.HomePage
-2019-22-15 10:22:10.353 [main] ERROR  - Failed to create new instance of class com.aqacourses.project.pages.HomePage
-2019-27-15 10:27:01.142 [main] ERROR  - No webdriver is bound to current thread: 1. You need to call open(url) first.
-2019-11-19 09:11:41.479 [main] ERROR  - Failed to create new instance of class com.aqacourses.project.pages.HomePage
+2019-16-21 18:16:12.563 [main] INFO   - Opened site
+2019-16-21 18:16:14.830 [main] INFO   - Opened Login Page
+2019-16-21 18:16:17.336 [main] INFO   - Opened My Account Page
+2019-16-21 18:16:17.391 [main] INFO   - Verified user name
+2019-16-21 18:16:19.737 [main] INFO   - User is signed out
+2019-16-21 18:16:19.802 [main] INFO   - Verified Login Page
+2019-16-21 18:16:21.183 [main] INFO   - Closed site
+2019-16-21 18:16:51.870 [main] INFO   - Opened site
+2019-16-21 18:16:54.964 [main] INFO   - Opened Login Page
+2019-16-21 18:16:58.470 [main] INFO   - Opened My Account Page
+2019-17-21 18:17:00.920 [main] INFO   - Opened Dresses Page
+2019-17-21 18:17:03.172 [main] INFO   - Opened Summer Dresses Page
+2019-17-21 18:17:03.261 [main] INFO   - Verified count of products from the message and from page
+2019-17-21 18:17:03.380 [main] INFO   - Selected only White dresses
+2019-17-21 18:17:03.434 [main] INFO   - Verified count of products from the message and from page again
+2019-17-21 18:17:04.830 [main] INFO   - Closed site
+2019-17-21 18:17:42.785 [main] INFO   - Opened site
+2019-17-21 18:17:45.836 [main] INFO   - Opened Login Page
+2019-17-21 18:17:49.223 [main] INFO   - Opened My Account Page
+2019-17-21 18:17:53.357 [main] INFO   - Opened T-Shirts Page
+2019-17-21 18:17:57.476 [main] INFO   - Opened Faded Short sleeve T-Shirt Page
+2019-17-21 18:17:57.610 [main] INFO   - Verified breadcrumb
+2019-17-21 18:17:57.852 [main] INFO   - Opened information dialog
+2019-18-21 18:18:01.252 [main] INFO   - Opened shopping card page
+2019-18-21 18:18:02.956 [main] INFO   - Clicked Increase quantity button
+2019-18-21 18:18:03.063 [main] INFO   - Verified total price with unit price multiplied with quantity
+2019-18-21 18:18:03.158 [main] INFO   - Deleted Faded Short sleeve T-Shirt
+2019-18-21 18:18:06.212 [main] INFO   - Verified alert message
+2019-18-21 18:18:07.634 [main] INFO   - Closed site
+2019-50-21 18:50:58.542 [main] ERROR  - null
+2019-51-21 18:51:58.903 [main] INFO   - Opened site
+2019-52-21 18:52:01.796 [main] INFO   - Opened Login Page
+2019-52-21 18:52:04.232 [main] INFO   - Opened My account page
+2019-52-21 18:52:15.332 [main] ERROR  - Expected condition failed: waiting for class to be "sfHover". Current class: "" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63252}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: 6712eb54a42017ac1ffc954226ead629
+2019-58-21 18:58:38.950 [main] INFO   - Opened site
+2019-58-21 18:58:42.763 [main] INFO   - Opened Login Page
+2019-58-21 18:58:47.346 [main] INFO   - Opened My account page
+2019-58-21 18:58:58.404 [main] ERROR  - Expected condition failed: waiting for class to be "sfHover". Current class: "" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63740}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: f71cd689e50f31cc5cf03bd7bcfb1d80
+2019-59-21 18:59:51.608 [main] INFO   - Opened site
+2019-59-21 18:59:53.883 [main] INFO   - Opened Login Page
+2019-59-21 18:59:56.353 [main] INFO   - Opened My account page
+2019-03-21 19:03:54.850 [main] INFO   - Opened site
+2019-03-21 19:03:57.415 [main] INFO   - Opened Login Page
+2019-03-21 19:03:59.714 [main] INFO   - Opened My account page
+2019-04-21 19:04:02.679 [main] INFO   - Opened Evening dresses page
+2019-04-21 19:04:49.286 [main] INFO   - Opened site
+2019-04-21 19:04:51.790 [main] INFO   - Opened Login Page
+2019-04-21 19:04:54.804 [main] INFO   - Opened My account page
+2019-04-21 19:04:57.479 [main] INFO   - Opened Evening dresses page
+2019-42-22 09:42:35.498 [main] ERROR  - null
+2019-46-22 09:46:27.661 [main] INFO   - Opened site
+2019-46-22 09:46:31.266 [main] INFO   - Opened Login Page
+2019-46-22 09:46:34.734 [main] INFO   - Opened My account page
+2019-46-22 09:46:37.818 [main] INFO   - Opened Evening dresses page
+2019-46-22 09:46:38.073 [main] INFO   - Opened Printed Dress on new window
+2019-47-22 09:47:20.621 [main] INFO   - Opened site
+2019-47-22 09:47:23.546 [main] INFO   - Opened Login Page
+2019-47-22 09:47:26.100 [main] INFO   - Opened My account page
+2019-47-22 09:47:28.713 [main] INFO   - Opened Evening dresses page
+2019-48-22 09:48:18.258 [main] INFO   - Opened Printed Dress on new window
+2019-32-22 10:32:34.235 [main] INFO   - Opened site
+2019-32-22 10:32:36.693 [main] INFO   - Opened Login Page
+2019-32-22 10:32:39.982 [main] INFO   - Opened My account page
+2019-32-22 10:32:42.952 [main] INFO   - Opened Evening dresses page
+2019-32-22 10:32:43.174 [main] INFO   - Opened Printed Dress on new window
+2019-32-22 10:32:45.238 [main] INFO   - Selected 'Pink' color
+2019-32-22 10:32:45.485 [main] INFO   - Selected 'L' size
+2019-32-22 10:32:45.606 [main] INFO   - Opened informational dialog
+2019-32-22 10:32:46.824 [main] INFO   - Returned to the page
+2019-35-22 15:35:34.729 [main] INFO   - Opened site
+2019-35-22 15:35:38.122 [main] INFO   - Opened Login Page
+2019-35-22 15:35:41.156 [main] INFO   - Opened My account page
+2019-35-22 15:35:46.907 [main] INFO   - Opened Evening dresses page
+2019-35-22 15:35:47.112 [main] INFO   - Opened Printed Dress on new window
+2019-35-22 15:35:51.535 [main] INFO   - Selected 'Pink' color
+2019-35-22 15:35:51.778 [main] INFO   - Selected 'L' size
+2019-35-22 15:35:51.890 [main] INFO   - Opened informational dialog
+2019-35-22 15:35:54.104 [main] INFO   - Returned to the page
+2019-35-22 15:35:54.829 [main] ERROR  - no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Product detail']"}
+  (Session info: chrome=73.0.3683.75)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53998}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: e0219d2fcea969192a74bbbf53928b4a
+*** Element info: {Using=xpath, value=//a[@title='Product detail']}
+2019-36-22 15:36:56.812 [main] INFO   - Opened site
+2019-36-22 15:36:59.695 [main] INFO   - Opened Login Page
+2019-37-22 15:37:02.238 [main] INFO   - Opened My account page
+2019-37-22 15:37:06.517 [main] INFO   - Opened Evening dresses page
+2019-37-22 15:37:06.752 [main] INFO   - Opened Printed Dress on new window
+2019-37-22 15:37:10.487 [main] INFO   - Selected 'Pink' color
+2019-37-22 15:37:10.731 [main] INFO   - Selected 'L' size
+2019-37-22 15:37:10.885 [main] INFO   - Opened informational dialog
+2019-37-22 15:37:12.658 [main] INFO   - Returned to the page
+2019-37-22 15:37:13.591 [main] ERROR  - no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Product detail']"}
+  (Session info: chrome=73.0.3683.75)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54141}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: 4490281590fedb393649e8e8f81cd664
+*** Element info: {Using=xpath, value=//a[@title='Product detail']}
+2019-41-22 15:41:30.732 [main] INFO   - Opened site
+2019-41-22 15:41:37.192 [main] INFO   - Opened Login Page
+2019-41-22 15:41:42.137 [main] INFO   - Opened My account page
+2019-41-22 15:41:47.549 [main] INFO   - Opened Evening dresses page
+2019-41-22 15:41:47.761 [main] INFO   - Opened Printed Dress on new window
+2019-41-22 15:41:51.058 [main] INFO   - Selected 'Pink' color
+2019-41-22 15:41:51.346 [main] INFO   - Selected 'L' size
+2019-41-22 15:41:51.566 [main] INFO   - Opened informational dialog
+2019-41-22 15:41:53.918 [main] INFO   - Returned to the page
+2019-41-22 15:41:55.605 [main] ERROR  - no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Product detail']"}
+  (Session info: chrome=73.0.3683.75)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54474}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: 83d0c479703ed0954fd217443fdbbb4d
+*** Element info: {Using=xpath, value=//a[@title='Product detail']}
+2019-46-22 15:46:24.616 [main] INFO   - Opened site
+2019-46-22 15:46:29.422 [main] INFO   - Opened Login Page
+2019-46-22 15:46:33.689 [main] INFO   - Opened My account page
+2019-46-22 15:46:38.787 [main] INFO   - Opened Evening dresses page
+2019-46-22 15:46:38.997 [main] INFO   - Opened Printed Dress on new window
+2019-46-22 15:46:41.878 [main] INFO   - Selected 'Pink' color
+2019-46-22 15:46:42.114 [main] INFO   - Selected 'L' size
+2019-46-22 15:46:42.211 [main] INFO   - Opened informational dialog
+2019-46-22 15:46:44.513 [main] INFO   - Returned to the page
+2019-48-22 15:48:04.916 [main] ERROR  - Expected condition failed: waiting for style to be "display: block;". Current style: "display: none;" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54823}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: 1ba8b834c746f1b526b6a860cd51dba9
+2019-48-22 15:48:48.132 [main] INFO   - Opened site
+2019-48-22 15:48:57.688 [main] INFO   - Opened Login Page
+2019-49-22 15:49:20.768 [main] INFO   - Opened My account page
+2019-49-22 15:49:33.416 [main] INFO   - Opened Evening dresses page
+2019-49-22 15:49:33.616 [main] INFO   - Opened Printed Dress on new window
+2019-49-22 15:49:42.440 [main] INFO   - Selected 'Pink' color
+2019-49-22 15:49:42.651 [main] INFO   - Selected 'L' size
+2019-49-22 15:49:42.773 [main] INFO   - Opened informational dialog
+2019-49-22 15:49:47.601 [main] INFO   - Returned to the page
+2019-49-22 15:49:49.296 [main] ERROR  - no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Product detail']"}
+  (Session info: chrome=73.0.3683.75)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55018}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: 1edd3b57178c6212fa7247d7ef5e7a24
+*** Element info: {Using=xpath, value=//a[@title='Product detail']}
+2019-52-22 15:52:19.141 [main] INFO   - Opened site
+2019-52-22 15:52:21.430 [main] INFO   - Opened Login Page
+2019-52-22 15:52:24.088 [main] INFO   - Opened My account page
+2019-52-22 15:52:27.520 [main] INFO   - Opened Evening dresses page
+2019-52-22 15:52:27.724 [main] INFO   - Opened Printed Dress on new window
+2019-52-22 15:52:31.370 [main] INFO   - Selected 'Pink' color
+2019-52-22 15:52:31.661 [main] INFO   - Selected 'L' size
+2019-52-22 15:52:31.771 [main] INFO   - Opened informational dialog
+2019-52-22 15:52:33.450 [main] INFO   - Returned to the page
+2019-52-22 15:52:35.200 [main] ERROR  - no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Product detail']"}
+  (Session info: chrome=73.0.3683.75)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55320}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: fde6649478f57896ac273bd4d42bf9ec
+*** Element info: {Using=xpath, value=//a[@title='Product detail']}
+2019-55-22 15:55:46.024 [main] INFO   - Opened site
+2019-55-22 15:55:49.035 [main] INFO   - Opened Login Page
+2019-55-22 15:55:53.150 [main] INFO   - Opened My account page
+2019-55-22 15:55:55.948 [main] INFO   - Opened Evening dresses page
+2019-55-22 15:55:56.140 [main] INFO   - Opened Printed Dress on new window
+2019-55-22 15:55:58.316 [main] INFO   - Selected 'Pink' color
+2019-55-22 15:55:58.648 [main] INFO   - Selected 'L' size
+2019-55-22 15:55:58.744 [main] INFO   - Opened informational dialog
+2019-55-22 15:55:59.963 [main] INFO   - Returned to the page
+2019-56-22 15:56:01.636 [main] ERROR  - no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Product detail']"}
+  (Session info: chrome=73.0.3683.75)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ODS1-LHP-F31392', ip: '172.30.148.33', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\D0CC9~1.TYS\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55580}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.75, webStorageEnabled: true}
+Session ID: 51fd2af45cec97bd1c7281700923c147
+*** Element info: {Using=xpath, value=//a[@title='Product detail']}
+2019-28-22 18:28:14.514 [main] INFO   - Opened site
+2019-28-22 18:28:16.762 [main] INFO   - Opened Login Page
+2019-28-22 18:28:21.952 [main] INFO   - Opened My account page
+2019-28-22 18:28:28.503 [main] INFO   - Opened Evening dresses page
+2019-28-22 18:28:28.689 [main] INFO   - Opened Printed Dress on new window
+2019-28-22 18:28:32.552 [main] INFO   - Selected 'Pink' color
+2019-28-22 18:28:32.788 [main] INFO   - Selected 'L' size
+2019-28-22 18:28:32.898 [main] INFO   - Opened informational dialog
+2019-28-22 18:28:35.119 [main] INFO   - Returned to the page
+2019-28-22 18:28:36.942 [main] ERROR  - String index out of range: -1
+2019-30-22 18:30:13.918 [main] INFO   - Opened site
+2019-30-22 18:30:15.955 [main] INFO   - Opened Login Page
+2019-30-22 18:30:18.205 [main] INFO   - Opened My account page
+2019-30-22 18:30:21.084 [main] INFO   - Opened Evening dresses page
+2019-30-22 18:30:21.252 [main] INFO   - Opened Printed Dress on new window
+2019-30-22 18:30:23.385 [main] INFO   - Selected 'Pink' color
+2019-30-22 18:30:23.604 [main] INFO   - Selected 'L' size
+2019-30-22 18:30:23.717 [main] INFO   - Opened informational dialog
+2019-30-22 18:30:25.420 [main] INFO   - Returned to the page
+2019-27-22 19:27:19.882 [main] INFO   - Opened site
+2019-27-22 19:27:21.920 [main] INFO   - Opened Login Page
+2019-27-22 19:27:24.429 [main] INFO   - Opened My account page
+2019-27-22 19:27:28.037 [main] INFO   - Opened Evening dresses page
+2019-27-22 19:27:28.233 [main] INFO   - Opened Printed Dress on new window
+2019-27-22 19:27:30.432 [main] INFO   - Selected 'Pink' color
+2019-27-22 19:27:30.669 [main] INFO   - Selected 'L' size
+2019-27-22 19:27:30.782 [main] INFO   - Opened informational dialog
+2019-27-22 19:27:33.000 [main] INFO   - Returned to the page
+2019-27-22 19:27:34.297 [main] INFO   - Product color and size verified
+2019-27-22 19:27:34.403 [main] INFO   - Product deleted
+2019-27-22 19:27:34.989 [main] ERROR  - expected:<[(empty)]> but was:<[]>
+2019-58-25 08:58:31.207 [main] INFO   - Opened site
+2019-58-25 08:58:33.497 [main] INFO   - Opened Login Page
+2019-58-25 08:58:35.960 [main] INFO   - Opened My account page
+2019-58-25 08:58:38.985 [main] INFO   - Opened Evening dresses page
+2019-58-25 08:58:39.179 [main] INFO   - Opened Printed Dress on new window
+2019-58-25 08:58:41.391 [main] INFO   - Selected 'Pink' color
+2019-58-25 08:58:41.649 [main] INFO   - Selected 'L' size
+2019-58-25 08:58:41.759 [main] INFO   - Opened informational dialog
+2019-58-25 08:58:42.982 [main] INFO   - Returned to the page
+2019-58-25 08:58:44.297 [main] INFO   - Product color and size verified
+2019-58-25 08:58:44.395 [main] INFO   - Product deleted
+2019-58-25 08:58:44.942 [main] ERROR  - expected:<[(empty)]> but was:<[]>
+2019-00-25 09:00:13.897 [main] INFO   - Opened site
+2019-00-25 09:00:16.549 [main] INFO   - Opened Login Page
+2019-00-25 09:00:18.708 [main] INFO   - Opened My account page
+2019-00-25 09:00:21.621 [main] INFO   - Opened Evening dresses page
+2019-00-25 09:00:21.821 [main] INFO   - Opened Printed Dress on new window
+2019-00-25 09:00:24.477 [main] INFO   - Selected 'Pink' color
+2019-00-25 09:00:24.706 [main] INFO   - Selected 'L' size
+2019-00-25 09:00:24.815 [main] INFO   - Opened informational dialog
+2019-00-25 09:00:26.507 [main] INFO   - Returned to the page
+2019-00-25 09:00:27.732 [main] INFO   - Product color and size verified
+2019-00-25 09:00:27.830 [main] INFO   - Product deleted
+2019-05-25 09:05:14.320 [main] INFO   - Opened site
+2019-05-25 09:05:17.039 [main] INFO   - Opened Login Page
+2019-05-25 09:05:20.266 [main] INFO   - Opened My account page
+2019-05-25 09:05:23.490 [main] INFO   - Opened Evening dresses page
+2019-05-25 09:05:23.693 [main] INFO   - Opened Printed Dress on new window
+2019-05-25 09:05:26.901 [main] INFO   - Selected 'Pink' color
+2019-05-25 09:05:27.132 [main] INFO   - Selected 'L' size
+2019-05-25 09:05:27.230 [main] INFO   - Opened informational dialog
+2019-05-25 09:05:28.913 [main] INFO   - Returned to the page
+2019-05-25 09:05:30.121 [main] INFO   - Product color and size verified
+2019-05-25 09:05:30.213 [main] INFO   - Product deleted
+2019-05-25 09:05:30.804 [main] ERROR  - expected:<[(empty)]> but was:<[]>
+2019-09-25 09:09:31.020 [main] INFO   - Opened site
+2019-09-25 09:09:33.037 [main] INFO   - Opened Login Page
+2019-09-25 09:09:35.522 [main] INFO   - Opened My account page
+2019-09-25 09:09:38.110 [main] INFO   - Opened Evening dresses page
+2019-09-25 09:09:38.337 [main] INFO   - Opened Printed Dress on new window
+2019-09-25 09:09:40.457 [main] INFO   - Selected 'Pink' color
+2019-09-25 09:09:40.695 [main] INFO   - Selected 'L' size
+2019-09-25 09:09:40.820 [main] INFO   - Opened informational dialog
+2019-09-25 09:09:42.014 [main] INFO   - Returned to the page
+2019-09-25 09:09:43.325 [main] INFO   - Product color and size verified
+2019-09-25 09:09:43.427 [main] INFO   - Product deleted
+2019-09-25 09:09:45.003 [main] INFO   - Card is empty
+2019-20-25 09:20:21.678 [main] INFO   - Opened site
+2019-20-25 09:20:23.823 [main] INFO   - Opened Login Page
+2019-20-25 09:20:26.183 [main] INFO   - Opened My account page
+2019-20-25 09:20:28.920 [main] INFO   - Opened Evening dresses page
+2019-20-25 09:20:29.103 [main] INFO   - Opened Printed Dress on new window
+2019-20-25 09:20:31.384 [main] INFO   - Selected 'Pink' color
+2019-20-25 09:20:31.613 [main] INFO   - Selected 'L' size
+2019-20-25 09:20:31.734 [main] INFO   - Opened informational dialog
+2019-20-25 09:20:32.933 [main] INFO   - Returned to the page
+2019-20-25 09:20:34.168 [main] INFO   - Product color and size verified
+2019-20-25 09:20:34.265 [main] INFO   - Product deleted
+2019-20-25 09:20:35.833 [main] INFO   - Card is empty
+2019-20-25 09:20:35.907 [main] INFO   - Window is closed and switched to the already opened
+2019-20-25 09:20:35.928 [main] INFO   - Cookies
+2019-20-25 09:20:37.275 [main] INFO   - Closed site
+2019-22-25 09:22:28.813 [main] INFO   - Opened site
+2019-22-25 09:22:31.738 [main] INFO   - Opened Login Page
+2019-22-25 09:22:36.622 [main] INFO   - Opened My account page
+2019-22-25 09:22:40.802 [main] INFO   - Opened Evening dresses page
+2019-22-25 09:22:40.978 [main] INFO   - Opened Printed Dress on new window
+2019-22-25 09:22:44.531 [main] INFO   - Selected 'Pink' color
+2019-22-25 09:22:44.760 [main] INFO   - Selected 'L' size
+2019-22-25 09:22:44.860 [main] INFO   - Opened informational dialog
+2019-22-25 09:22:46.546 [main] INFO   - Returned to the page
+2019-22-25 09:22:47.750 [main] INFO   - Product color and size verified
+2019-22-25 09:22:47.845 [main] INFO   - Product deleted
+2019-22-25 09:22:49.424 [main] INFO   - Card is empty
+2019-22-25 09:22:49.493 [main] INFO   - Window is closed and switched to the already opened
+2019-22-25 09:22:49.505 [main] INFO   - Cookies
+2019-22-25 09:22:50.822 [main] INFO   - Closed site
+2019-37-25 09:37:24.521 [main] INFO   - Opened site
+2019-37-25 09:37:26.505 [main] INFO   - Opened Login Page
+2019-37-25 09:37:29.183 [main] INFO   - Opened My Account Page
+2019-37-25 09:37:31.144 [main] INFO   - Opened T-Shirts Page
+2019-37-25 09:37:33.154 [main] INFO   - Opened Faded Short sleeve T-Shirt Page
+2019-37-25 09:37:33.238 [main] INFO   - Verified breadcrumb
+2019-37-25 09:37:33.311 [main] INFO   - Opened information dialog
+2019-37-25 09:37:36.381 [main] INFO   - Opened shopping card page
+2019-37-25 09:37:37.604 [main] INFO   - Clicked Increase quantity button
+2019-37-25 09:37:37.684 [main] INFO   - Verified total price with unit price multiplied with quantity
+2019-37-25 09:37:37.755 [main] INFO   - Deleted Faded Short sleeve T-Shirt
+2019-37-25 09:37:40.440 [main] INFO   - Verified alert message
+2019-37-25 09:37:41.794 [main] INFO   - Closed site
+2019-37-25 09:37:54.785 [main] INFO   - Opened site
+2019-37-25 09:37:57.520 [main] INFO   - Opened Login Page
+2019-37-25 09:37:59.864 [main] INFO   - Opened My Account Page
+2019-38-25 09:38:02.337 [main] INFO   - Opened Dresses Page
+2019-38-25 09:38:04.449 [main] INFO   - Opened Summer Dresses Page
+2019-38-25 09:38:04.541 [main] INFO   - Verified count of products from the message and from page
+2019-38-25 09:38:04.663 [main] INFO   - Selected only White dresses
+2019-38-25 09:38:04.721 [main] INFO   - Verified count of products from the message and from page again
+2019-38-25 09:38:06.083 [main] INFO   - Closed site
+2019-38-25 09:38:18.731 [main] INFO   - Opened site
+2019-38-25 09:38:20.988 [main] INFO   - Opened Login Page
+2019-38-25 09:38:23.586 [main] INFO   - Opened My Account Page
+2019-38-25 09:38:23.671 [main] INFO   - Verified user name
+2019-38-25 09:38:26.170 [main] INFO   - User is signed out
+2019-38-25 09:38:26.238 [main] INFO   - Verified Login Page
+2019-38-25 09:38:27.569 [main] INFO   - Closed site
+2019-38-25 09:38:40.377 [main] INFO   - Opened site
+2019-38-25 09:38:42.633 [main] INFO   - Opened Login Page
+2019-38-25 09:38:44.793 [main] INFO   - Opened My account page
+2019-38-25 09:38:47.514 [main] INFO   - Opened Evening dresses page
+2019-38-25 09:38:47.732 [main] INFO   - Opened Printed Dress on new window
+2019-38-25 09:38:50.869 [main] INFO   - Selected 'Pink' color
+2019-38-25 09:38:51.130 [main] INFO   - Selected 'L' size
+2019-38-25 09:38:51.274 [main] INFO   - Opened informational dialog
+2019-38-25 09:38:52.498 [main] INFO   - Returned to the page
+2019-38-25 09:38:53.741 [main] INFO   - Product color and size verified
+2019-38-25 09:38:53.848 [main] INFO   - Product deleted
+2019-38-25 09:38:55.933 [main] INFO   - Card is empty
+2019-38-25 09:38:56.020 [main] INFO   - Window is closed and switched to the already opened
+2019-38-25 09:38:56.036 [main] INFO   - Cookies
+2019-38-25 09:38:57.402 [main] INFO   - Closed site

@@ -1,26 +1,33 @@
 package com.aqacourses.project.pages;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
-
 import com.aqacourses.project.base.BaseTest;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class DetailsPage extends AbstractPage {
 
+    private String PRODUCT_COLOR_XPATH = "//a[@name='%s']";
+    private String PRODUCT_SIZE_XPATH = "//select[@id='group_1']/option[@title='%s']";
+
     @FindBy(xpath = "//div[contains(@class,'breadcrumb')]")
-    WebElement breadCrumb;
+    private WebElement breadCrumb;
 
     @FindBy(xpath = "//button[@class='exclusive']")
-    WebElement addToCardButton;
+    private WebElement addToCardButton;
 
     @FindBy(xpath = "//a[@title='Proceed to checkout']")
-    WebElement proceedToCheckoutButton;
+    private WebElement proceedToCheckoutButton;
+
+    @FindBy(xpath = "//span[@title='Continue shopping']")
+    private WebElement continueShoppingButton;
 
     @FindBy(xpath = "//h1[@itemprop='name']")
-    WebElement productName;
+    private WebElement productName;
+
+    @FindBy(xpath = "//select[@id='group_1']")
+    private WebElement sizesDropDownList;
 
     /**
      * Constructor
@@ -34,13 +41,13 @@ public class DetailsPage extends AbstractPage {
     /** Verify that bread crumb is correct */
     public void verifyBreadCrumb(String breadCrumbText) {
         Assert.assertEquals(
-                breadCrumbText + $(productName).text(),
-                $(breadCrumb).text().replaceAll("[^a-zA-Z-\\s]", "").trim());
+                breadCrumbText + productName.getText(),
+                breadCrumb.getText().replaceAll("[^a-zA-Z-\\s]", "").trim());
     }
 
     /** Method for clicking to Add button */
     public void clickAddToCardButton() {
-        $(addToCardButton).click();
+        addToCardButton.click();
     }
 
     /**
@@ -50,7 +57,42 @@ public class DetailsPage extends AbstractPage {
      */
     public ShoppingCardPage clickToProceedToCheckOutButton() {
         testClass.waitTillElementIsVisible(proceedToCheckoutButton);
-        $(proceedToCheckoutButton).click();
-        return page(ShoppingCardPage.class);
+        proceedToCheckoutButton.click();
+        return new ShoppingCardPage(testClass);
+    }
+
+    /** Click to Continue Shopping Button */
+    public void clickToContinueShoppingButton() {
+        testClass.waitTillElementIsVisible(continueShoppingButton);
+        continueShoppingButton.click();
+    }
+
+    /**
+     * Click to appropriate product color
+     *
+     * @param productColor
+     */
+    public void selectProductColor(String productColor) {
+        testClass.waitTillElementIsVisible(
+                testClass
+                        .getDriver()
+                        .findElement(By.xpath(String.format(PRODUCT_COLOR_XPATH, productColor))));
+        testClass
+                .getDriver()
+                .findElement(By.xpath(String.format(PRODUCT_COLOR_XPATH, productColor)))
+                .click();
+    }
+
+    /**
+     * Click to appropriate product size
+     *
+     * @param productSize
+     */
+    public void selectProductSize(String productSize) {
+        sizesDropDownList.click();
+        testClass
+                .getDriver()
+                .findElement(By.xpath(String.format(PRODUCT_SIZE_XPATH, productSize)))
+                .click();
     }
 }

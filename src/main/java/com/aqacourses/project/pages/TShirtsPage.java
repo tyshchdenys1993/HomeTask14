@@ -1,10 +1,7 @@
 package com.aqacourses.project.pages;
 
-import static com.codeborne.selenide.Selectors.byXpath;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
-
 import com.aqacourses.project.base.BaseTest;
+import org.openqa.selenium.By;
 
 public class TShirtsPage extends AbstractPage {
     private String PRODUCT_DETAILS_XPATH = "//h5[@itemprop='name']/a[contains(., '%s')]";
@@ -25,9 +22,13 @@ public class TShirtsPage extends AbstractPage {
      */
     public DetailsPage clickToProductForDetails(String productName) {
         testClass.waitTillElementIsClickable(
-                $(byXpath(String.format(PRODUCT_DETAILS_XPATH, productName))));
-
-        $(byXpath(String.format(PRODUCT_DETAILS_XPATH, productName))).click();
-        return page(DetailsPage.class);
+                testClass
+                        .getDriver()
+                        .findElement(By.xpath(String.format(PRODUCT_DETAILS_XPATH, productName))));
+        testClass
+                .getDriver()
+                .findElement(By.xpath(String.format(PRODUCT_DETAILS_XPATH, productName)))
+                .click();
+        return new DetailsPage(testClass);
     }
 }
